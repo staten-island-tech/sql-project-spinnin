@@ -1,5 +1,5 @@
 {
-  "name": "supabase-vue-3",
+  "name": "barbershop",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,10 +8,14 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "devDependencies": {
-    "vite": "^4.3.2"
-  },
   "dependencies": {
-    "@supabase/supabase-js": "^2.22.0"
+    "@supabase/supabase-js": "^2.24.0",
+    "pinia": "^2.1.3",
+    "vue": "^3.2.47",
+    "vue-router": "^4.2.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "vite": "^4.3.9"
   }
 }
