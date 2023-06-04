@@ -91,4 +91,6 @@ getAllBookings();
   justify-content: center;
   gap: 0.5rem;
 }
+.haircut {
+}
 </style>
