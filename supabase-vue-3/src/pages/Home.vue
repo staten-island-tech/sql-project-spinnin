@@ -93,5 +93,6 @@ getAllBookings();
 }
 .haircut {
   display: flex;
+  flex-direction: column;
 }
 </style>
