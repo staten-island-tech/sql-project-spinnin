@@ -92,5 +92,6 @@ getAllBookings();
   gap: 0.5rem;
 }
 .haircut {
+  display: flex;
 }
 </style>
