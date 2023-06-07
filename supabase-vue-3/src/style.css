@@ -87,3 +87,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+body{
+  background-color: navy;
+}
+#app{
+  background-color: white;
+}
