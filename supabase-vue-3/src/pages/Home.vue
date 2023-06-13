@@ -24,6 +24,17 @@
       <input v-model="haircut_type" id="haircut_type" type="text" />
       <button @click="createBooking" type="button">Create Booking</button>
     </form>
+    <form @submit.prevent="delData">
+      <div>
+        <input id="deleterow" type="text" required v-model="deleterow" />
+      </div>
+      <button
+        type="submit
+    "
+      >
+        remove booking
+      </button>
+    </form>
     <div class="haircut-gallery">
       <div v-for="(haircut, index) in allHaircuts" class="haircut" :id="index">
         <p>{{ haircut.haircut_name }}</p>
@@ -60,6 +71,21 @@ async function createBooking() {
   }
   console.log(data);
 }
+const delData = async () => {
+  try {
+    const { error } = await supabase
+      .from("bookings")
+      .delete()
+      .eq("name", deleterow.value);
+    if (error) throw error;
+    deleterow.value = "delete-log";
+  } catch (error) {
+    errorMsg.value = "Error: ${error.message}";
+    setTimeout(() => {
+      errorMsg.value = false;
+    }, 5000);
+  }
+};
 
 async function getAllHaircuts() {
   const { error, data } = await supabase.from("Haircuts").select("*");
